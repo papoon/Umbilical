@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Umbilical</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="umbilical">Umbilical</string>
+    <string name="title_activity_register">Registo</string>
+    <string name="boas_vindas">Olá, bem-vindo à familia Umbilical</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="escolher_perfil">Escolhe o perfil que pretendes criar</string>
+    <string name="crianca">Criança</string>
+    <string name="adulto">Adulto</string>
+</resources>
