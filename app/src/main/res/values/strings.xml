@@ -9,7 +9,12 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="escolher_perfil">Escolhe o perfil que pretendes criar</string>
+    <string name="escolher_perfil">Escolhe o teu perfil</string>
     <string name="crianca">Criança</string>
     <string name="adulto">Adulto</string>
+    <string name="nome">Nome</string>
+    <string name="palavra_passe">Palavra-Passe</string>
+    <string name="confirmar_palavra_passe">Confirma Palavra-Passe</string>
+    <string name="entrar">Entrar</string>
+    <string name="codigo_umbilical">Código Umbilical</string>
 </resources>

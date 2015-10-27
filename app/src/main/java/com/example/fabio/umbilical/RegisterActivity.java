@@ -4,13 +4,37 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 public class RegisterActivity extends AppCompatActivity {
+
+    Button mButtonAdulto;
+    Button mButtonCrianca;
+
+    LinearLayout mRegistoInicio;
+    LinearLayout mRegistoAdulto;
+    LinearLayout mRegistoCrianca;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+
+        mButtonAdulto = (Button) findViewById(R.id.adulto_button_id);
+        mButtonCrianca = (Button) findViewById(R.id.crianca_button_id);
+
+        mRegistoInicio = (LinearLayout) findViewById(R.id.registo_p1);
+        mRegistoAdulto = (LinearLayout) findViewById(R.id.registo_adulto);
+        mRegistoCrianca = (LinearLayout) findViewById(R.id.registo_crianca);
+
+        mButtonAdulto.setOnClickListener(buttonAdultoClick);
+        mButtonCrianca.setOnClickListener(buttonCriancaClick);
+
+
+
     }
 
     @Override
@@ -34,6 +58,38 @@ public class RegisterActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onBackPressed() {
+
+        if (mRegistoAdulto.getVisibility() == View.VISIBLE || mRegistoCrianca.getVisibility() == View.VISIBLE) {
+
+            if (mRegistoAdulto.getVisibility() == View.VISIBLE) {
+                mRegistoAdulto.setVisibility(View.GONE);
+            }
+
+            if(mRegistoCrianca.getVisibility() == View.VISIBLE){
+                mRegistoCrianca.setVisibility(View.GONE);
+            }
+            mRegistoInicio.setVisibility(View.VISIBLE);
+        }
+    }
+
+    private View.OnClickListener buttonAdultoClick = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            mRegistoInicio.setVisibility(View.GONE);
+            mRegistoAdulto.setVisibility(View.VISIBLE);
+        }
+    };
+
+    private View.OnClickListener buttonCriancaClick = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            mRegistoInicio.setVisibility(View.GONE);
+            mRegistoCrianca.setVisibility(View.VISIBLE);
+        }
+    };
 
 
 }
